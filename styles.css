@@ -6,16 +6,17 @@ header{
   color: white;
 font-size: 40px;
 font-weight: bolder;
+display: flex;
+justify-content: center;
+align-items: center;
+grid-column: 1/-1;
+grid-row: 1/2;
 }
-
-  header>h1{
-   margin-top: 12.5%;
-  
-  }
 
 body{
   display: grid;
   grid-template-rows: 50% 50%;
+  grid-template-columns: 33% 33% 34%;
     
 }
 .bottom{
@@ -25,14 +26,20 @@ body{
   height: 50vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
+  grid-row: 2/2;
+  grid-column: 1/-1;
 }
 #left{
   height: 50px;
-  width: 300px;
+  width: 100%;
   background-color: rgba(196, 177, 177, 0.856);
   margin-top: 75px;
-  display: flex;
-justify-content: center;  
+  display: grid;
+  grid-row: 2/3 1fr;
+  grid-column: 1/2 1fr;
+justify-content: center; 
+align-items: center; 
+
   
   
 
@@ -43,29 +50,42 @@ div{
     justify-content: center;
     margin: 5px;
     width: 100%;
+ 
+
+    
+
 
 
 }
 #middle{
   height: 50px;
-  width: 300px;
+  width: 100%;
   background-color: rgba(196, 177, 177, 0.856);
   margin-top: 75px;
-  display: flex;
-  justify-content: center;  
+  align-content: center;
+  display: grid;
+  grid-row: 2/3 1fr;
+  grid-column: 2/3 1fr;
+  justify-content: center;
+  align-items: center; 
+  
 
 }
 #right{
   height: 50px;
-  width: 300px;
+  width: 100%;
   background-color: rgba(196, 177, 177, 0.856);
   margin-top: 75px;
-  display: flex;
+  display: grid;
+  grid-row: 2/3 1fr;
+  grid-column: 3/4 1fr;
   justify-content: center;  
+  align-items: center; 
+
 
 
 }
-@media (max-width: 576px) {
+@media (max-width: 576px){
   section.bottom{
     display: grid;
     border-top: black;
@@ -87,8 +107,10 @@ div{
     div{
       align-content: center;
       justify-content: center;
-      width: 100%;
-      color: rgba(196, 177, 177, 0.856);
+      width: 97%;
+      color: rgba(7, 0, 0, 0.856);
+      margin: 5px;
+      
     }
 
  
